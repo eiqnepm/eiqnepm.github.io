@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlobalShutdown</title>
+  </head>
+  <body>
+    <script>
+      (async () => {
+        let id = new URLSearchParams(window.location.search).get("id");
+        id = id ? id : "";
+        while (true) {
+          id = prompt("Shutdown machine with the ID of", id);
+          const response = await fetch(
+            "https://globalshutdown.eiqnepm.duckdns.org/shutdown",
+            {
+              method: "POST",
+              body: JSON.stringify(id),
+            }
+          );
+
+          if (response.status !== 200) {
+            alert("Error!");
+            continue;
+          }
+
+          alert("Success!");
+        }
+      })();
+    </script>
+  </body>
+</html>
