@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@picocss/pico";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: "Next.js on GitHub Pages",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header></Header>
         <main className="container">{children}</main>
       </body>
     </html>
