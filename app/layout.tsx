@@ -3,8 +3,8 @@ import "@picocss/pico";
 import Header from "./components/header";
 
 export const metadata: Metadata = {
-  title: "Next.js on GitHub Pages",
-  description: "Deploy your static Next.js site to GitHub Pages.",
+  title: "Eiqnepm",
+  description: "Hello world!",
 };
 
 export default function RootLayout({
