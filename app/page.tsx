@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <main>
-      <div>Next.js on GitHub Pages</div>
-    </main>
-  );
+  return <h1>Hello world!</h1>;
 }
