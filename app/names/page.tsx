@@ -8,11 +8,9 @@ export default function Names() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        "https://www.reddit.com/api/v1/generate_username.json"
-      );
+      const response = await fetch("https://rich-bobcat-25.deno.dev");
       const data = await response.json();
-      setNames(data.usernames);
+      setNames(data);
       setLoading(false);
     })();
   }, []);
