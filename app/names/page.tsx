@@ -1,6 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "./names.module.css";
+
+async function copy(text: string) {
+  await navigator.clipboard.writeText(text);
+}
 
 export default function Names() {
   const [names, setNames] = useState<string[]>([]);
@@ -19,9 +24,16 @@ export default function Names() {
   if (!names) return <p>No names</p>;
 
   return (
-    <ul>
+    <ul className={styles.names}>
       {names.map((username: any) => (
-        <li key={username}>{username}</li>
+        <li
+          key={username}
+          onClick={() => {
+            copy(username);
+          }}
+        >
+          <div data-tooltip="Click to copy">{username}</div>
+        </li>
       ))}
     </ul>
   );

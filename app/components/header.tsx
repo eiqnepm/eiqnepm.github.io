@@ -6,16 +6,26 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <strong style={{ textTransform: "uppercase" }}>
-              <Link href="/" className="contrast">
-                eiqnepm
+            <strong>
+              <Link
+                href="/"
+                className="contrast"
+                data-tooltip="That's me!"
+                data-placement="right"
+              >
+                <div style={{ textTransform: "uppercase" }}>eiqnepm</div>
               </Link>
             </strong>
           </li>
         </ul>
         <ul>
           <li>
-            <Link href="/names" className="contrast">
+            <Link
+              href="/names"
+              className="contrast"
+              data-tooltip="Generate random usernames"
+              data-placement="left"
+            >
               Names
             </Link>
           </li>

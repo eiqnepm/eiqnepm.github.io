@@ -1,0 +1,8 @@
+.names li {
+  justify-self: start;
+}
+
+.names li div {
+  cursor: pointer !important;
+  border-bottom: none !important;
+}
