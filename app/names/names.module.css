@@ -1,3 +1,7 @@
+.names {
+  display: grid;
+}
+
 .names li {
   justify-self: start;
 }
