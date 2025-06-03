@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@picocss/pico";
 import Header from "./components/header";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "Eiqnepm",

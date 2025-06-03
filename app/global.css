@@ -1,0 +1,9 @@
+[data-tooltip]:focus::after,
+[data-tooltip]:focus::before {
+  opacity: 0 !important;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:hover::before {
+  opacity: 1 !important;
+}
